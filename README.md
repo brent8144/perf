@@ -66,7 +66,7 @@ perf_test\src\AndroidTestByPython-master\Android_perf
 perf_test\src\py-ios-device-main\iOS_perf
 
 #### Step.1 設定 iOS DB資訊  
-設定 DB 連接資訊 `db_set.py`
+設定 DB 連接資訊 `config.py`
 
 ```python
 # db 連結相關設定
