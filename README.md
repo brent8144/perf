@@ -14,8 +14,9 @@
       - [Step.2 設定 app 的 bundle id](#step2-設定-app-的-bundle-id)
       - [Step.3 執行程式](#step3-執行程式)
   - [Project Layout](#project-layout)
-  - [Documentations](#documentations)
-  - [References](#references)
+  - [執行結果](#執行結果)
+      - [Andorid](#Android)
+      - [iOS](#iOS)
 
 --- 
 
@@ -38,10 +39,10 @@ make install_requirements
 ---
 ##  Android 效能測試
 
-#### Step.0 Android 效能測試位置
+### Step.0 Android 效能測試位置
 perf_test\src\AndroidTestByPython-master\Android_perf
 
-#### Step.1 設定 Android DB資訊 
+### Step.1 設定 Android DB資訊 
 設定 DB 連接資訊 `FpsListenserImpl.py`
 
 ```python
@@ -55,17 +56,17 @@ perf_test\src\AndroidTestByPython-master\Android_perf
     charset='utf8'
     )
 ```
-#### Step.2 執行程式
+### Step.2 執行程式
 執行程式，即可進行效能測試 `android_perf.py`
 
 ---
 
 ##  IOS 效能測試
 
-#### Step.0 iOS 效能測試位置
+### Step.0 iOS 效能測試位置
 perf_test\src\py-ios-device-main\iOS_perf
 
-#### Step.1 設定 iOS DB資訊  
+### Step.1 設定 iOS DB資訊  
 設定 DB 連接資訊 `config.py`
 
 ```python
@@ -78,7 +79,7 @@ db='db_name',
 charset='utf8'
 ```
 
-#### Step.2 設定 app 的 bundle id
+### Step.2 設定 app 的 bundle id
 設定要測試 app 的 bundle id `ios_perf.py`
 
 ```python
@@ -86,7 +87,7 @@ charset='utf8'
 # 測試app包名
 app_bundle_id = "com.google.chrome.ios" 
 ```
-#### Step.3 執行程式 
+### Step.3 執行程式 
 執行程式，即可進行效能測試 `ios_perf.py`
 
 ---
@@ -107,12 +108,12 @@ KKGame Slot Regression Testing Tool
 
 ---
 
-## Documentations
+## 執行結果
 
-施工中 ...
+### Android
 
----
+![image](https://github.com/brent8144/perf/blob/main/pic/Android.PNG)
 
-## References
+### iOS
 
-施工中 ...
+![image](https://github.com/brent8144/perf/blob/main/pic/ios.PNG)
