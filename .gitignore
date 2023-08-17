@@ -1,0 +1,8 @@
+# folder
+test_data
+and_screenshot
+
+# file
+.DS_Store
+.project
+.pydevproject
