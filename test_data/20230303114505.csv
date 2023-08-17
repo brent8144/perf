@@ -1,5 +1,0 @@
-time,iphone_info,package,mem,cpu,systemCpu,rxBytes,txBytes,rxTcpBytes,txTcpBytes,fps,level,batterytem
-2023-03-03 11:45:06.730, Oppo PEPM00;oplus6893;7G, com.android.chrome, 121.374, 2.47, 44.41, 0.0, 0.0, 0.0, 0.0, 89, 86, 33.1
-2023-03-03 11:45:07.436, Oppo PEPM00;oplus6893;7G, com.android.chrome, 121.089, 2.44, 43.9, 0.0, 0.0, 0.0, 0.0, 89, 86, 33.1
-2023-03-03 11:45:08.194, Oppo PEPM00;oplus6893;7G, com.android.chrome, 121.071, 2.98, 42.98, 0.0, 0.0, 0.0, 0.0, 89, 86, 33.1
-2023-03-03 11:45:08.936, Oppo PEPM00;oplus6893;7G, com.android.chrome, 121.138, 2.49, 39.97, 0.0, 0.0, 0.0, 0.0, 89, 86, 33.1
