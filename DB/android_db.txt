@@ -1,0 +1,48 @@
+CREATE DATABASE android_test;
+
+use android_test;
+CREATE TABLE `and_battery` (
+  `battery` varchar(100) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `time_battery` TIMESTAMP DEFAULT NULL
+  );
+use android_test;
+CREATE TABLE `and_cpu` (
+  `cpukel` varchar(100) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `use_cpu` varchar(100) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `sys_cpu` varchar(100) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `temperature` varchar(100) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `time_cpu` TIMESTAMP DEFAULT NULL
+  );
+use android_test;
+CREATE TABLE `and_drawcall` (
+  `drawcall` varchar(100) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `time_drawcall` TIMESTAMP DEFAULT NULL
+  );
+use android_test;
+CREATE TABLE `and_fps` (
+  `jank` varchar(100) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `big_jank` varchar(100) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `frame_count` varchar(100) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `_fps` varchar(100) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `time_fps` TIMESTAMP DEFAULT NULL
+  );
+use android_test;
+CREATE TABLE `and_info` (
+  `device_model` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `device_os` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `device_id` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `pkg_name` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `window_name` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `time_info` TIMESTAMP DEFAULT NULL
+  );
+use android_test;
+CREATE TABLE `and_memory` (
+  `memory` varchar(100) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `time_memory` TIMESTAMP DEFAULT NULL
+  );
+use android_test;
+CREATE TABLE `and_network` (
+  `netflow_download` varchar(100) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `netflow_upload` varchar(100) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `time_net` TIMESTAMP DEFAULT NULL
+  );

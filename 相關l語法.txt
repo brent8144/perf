@@ -1,0 +1,74 @@
+#清空資料 IOS
+truncate table ios_test.my_cpu;
+truncate table ios_test.my_fps;
+truncate table ios_test.my_gpu;
+truncate table ios_test.my_memory;
+truncate table ios_test.my_network;
+truncate table ios_test.my_phone;
+
+#清空資料 Android
+truncate table android_test.and_cpu;
+truncate table android_test.and_fps;
+truncate table android_test.and_memory;
+truncate table android_test.and_network;
+truncate table android_test.and_battery;
+truncate table android_test.and_drawcall;
+truncate table android_test.and_info;
+------------------------------------------
+#Grafana
+#General
+#FPS
+select unix_timestamp(time_fps) as time,avg(jank) as jank,avg(fps)as fps,avg(big_jank)as big_jank,avg(stutter) as stutter
+from ios_test.my_fps
+where unix_timestamp(time_fps)
+group by 1
+order by unix_timestamp(time_fps)
+
+#CPU
+select unix_timestamp(time_cpu) as time,avg(use_cpu) as use_cpu,avg(sys_cpu) as sys_cpu,avg(count_cpu) as count_cpu
+from ios_test.my_cpu
+where unix_timestamp(time_cpu)
+group by 1
+order by unix_timestamp(time_cpu)
+
+#MEMORY
+select unix_timestamp(time_memory) as time,avg(memory) as memory
+from ios_test.my_memory
+where unix_timestamp(time_memory)
+group by 1
+order by unix_timestamp(time_memory)
+
+#GPU
+select unix_timestamp(time_gpu) as time,avg(gpu_Device) as gpu_Device,avg(gpu_Renderer) as gpu_Renderer,avg(gpu_Tiler) as gpu_Tiler 
+from ios_test.my_gpu
+where unix_timestamp(time_gpu)
+group by 1
+order by unix_timestamp(time_gpu)
+
+
+----------------------------
+#cmd
+#fps
+pyidevice instruments fps
+
+#cpu
+pyidevice instruments sysmontap --help
+pyidevice instruments sysmontap  -b com.google.chrome.ios --proc_filter memVirtualSize,cpuUsage --processes --sort cpuUsage 
+#只显示 memVirtualSize,cpuUsage 参数的进程列表，且根据 cpuUsage 字段排序 
+
+
+import time # 引入time
+
+time_stamp = 1599678000 # 設定timeStamp
+struct_time = time.localtime(time_stamp) # 轉成時間元組
+timeString = time.strftime("%Y-%m %H:%M:%S", struct_time) # 轉成字串
+print(timeString)
+
+
+
+-----------------------------------------
+
+FPS打印 {'currentTime': '2022-06-08 10:47:55.026308', 'FPS': 1.9983779832036332, 'jank': 1, 'big_jank': 0, 'stutter': 0.8595915065605084}
+GPU打印 {'header': {'Device Utilization %': 0, 'Renderer Utilization %': 0, 'Alloc system memory': 677232640, 'recoveryCount': 0, 'Allocated PB Size': 2621440, 'Tiler Utilization %': 0, 'SplitSceneCount': 0, 'XRVideoCardRunTimeStamp': 17150853, 'In use system memory': 29491200, 'TiledSceneBytes': 0, 'IOGLBundleName': 'Built-In', 'CoreAnimationFramesPerSecond': 0}}
+CPU打印 {'timestamp': 1654656475685, 'pid': 5365, 'value': 0.0, 'sys_value': 40.44845661036692, 'count': 2}
+内存打印 {'pid': 5365, 'timestamp': 1654656475713, 'value': 8.719192504882812}

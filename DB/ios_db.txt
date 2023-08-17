@@ -1,0 +1,51 @@
+CREATE DATABASE ios_test;
+
+use ios_test;
+CREATE TABLE `my_cpu` (
+  `use_cpu` varchar(100) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `sys_cpu` varchar(100) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `count_cpu` varchar(100) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `run_id` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `time_cpu` TIMESTAMP DEFAULT NULL
+  );
+use ios_test;
+CREATE TABLE `my_fps` (
+  `fps` varchar(100) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `jank` varchar(100) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `big_jank` varchar(100) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `stutter` varchar(100) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `run_id` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `time_fps` TIMESTAMP DEFAULT NULL
+  );
+use ios_test;
+CREATE TABLE `my_gpu` (
+  `gpu_Device` varchar(100) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `gpu_Renderer` varchar(100) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `gpu_Tiler` varchar(100) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `drawcall` varchar(100) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `run_id` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `time_gpu` TIMESTAMP DEFAULT NULL
+  );
+use ios_test;
+CREATE TABLE `my_memory` (
+  `memory` varchar(100) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `run_id` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `time_memory` TIMESTAMP DEFAULT NULL
+  );
+use ios_test;
+CREATE TABLE `my_network` (
+  `network_downFlow` varchar(100) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `network_upFlow` varchar(100) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `run_id` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `time_network` TIMESTAMP DEFAULT NULL
+  );
+use ios_test;
+CREATE TABLE `my_phone` (
+  `MarketName` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `DeviceName` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `ProductName` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `ProductVersion` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `start_time` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `UniqueDeviceID` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `app_bundle_id` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL
+  );

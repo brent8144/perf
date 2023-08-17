@@ -3,7 +3,7 @@
 ![ios_perf.py]
 ![db_set.py]
 
-# brent_yang 20230206
+# perf with iOS & Android
 
 #####  Android 效能測試
 
