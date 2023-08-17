@@ -4,13 +4,13 @@
   - [Summary](#summary)
   - [Quick Start](#quick-start)
     - [安裝 Python Modules](#安裝-python-modules)
-  - [Android 效能測試](#Andorid-效能測試)
-      - [Step.0 Android 效能測試程式位置](#step0-Android-效能測試程式位置)
-      - [Step.1 設定 Android DB 資訊](#step1-設定-Android-DB-資訊)
+  - [Android 效能測試](#android-效能測試)
+      - [Step.0 Android 效能測試程式位置](#step0-android-效能測試程式位置)
+      - [Step.1 設定 Android DB資訊](#step1-設定-android-db資訊)
       - [Step.2 執行程式](#step2-執行程式)
-  - [iOS 效能測試](#iOS-效能測試)
-      - [Step.0 iOS 效能測試程式位置](#step0-iOS-效能測試程式位置)
-      - [Step.1 設定 iOS DB 資訊](#step1-設定-iOS-DB-資訊)
+  - [iOS 效能測試](#ios-效能測試)
+      - [Step.0 iOS 效能測試程式位置](#step0-ios-效能測試程式位置)
+      - [Step.1 設定 iOS DB資訊](#step1-設定-ios-db資訊)
       - [Step.2 設定 app 的 bundle id](#step2-設定-app-的-bundle-id)
       - [Step.3 執行程式](#step3-執行程式)
   - [Project Layout](#project-layout)
@@ -38,9 +38,9 @@ make install_requirements
 
 ---
 
-##  Android 效能測試
+## Android 效能測試
 
-### Step.0 Android 效能測試位置
+### Step.0 Android 效能測試程式位置
 perf_test\src\AndroidTestByPython-master\Android_perf
 
 ### Step.1 設定 Android DB資訊 
@@ -62,9 +62,9 @@ perf_test\src\AndroidTestByPython-master\Android_perf
 
 ---
 
-##  IOS 效能測試
+## iOS 效能測試
 
-### Step.0 iOS 效能測試位置
+### Step.0 iOS 效能測試程式位置
 perf_test\src\py-ios-device-main\iOS_perf
 
 ### Step.1 設定 iOS DB資訊  
@@ -79,7 +79,6 @@ passwd='password',
 db='db_name',
 charset='utf8'
 ```
-
 ### Step.2 設定 app 的 bundle id
 設定要測試 app 的 bundle id `ios_perf.py`
 
