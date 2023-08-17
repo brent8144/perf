@@ -1,4 +1,4 @@
-# Performance Tool ith iOS and Android
+# Performance Tool with iOS and Android
 
 - [Performance Tool with iOS and Android](#kkgame-slot-regression-testing-tool)
   - [Summary](#summary)
